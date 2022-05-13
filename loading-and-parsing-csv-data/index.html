@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fetchText = async (url) => {
+            const response = await fetch(url)
+            const text = await response.text()
+            return await response.text()
+        }
+        csvUrl = 'https://gist.githubusercontent.com/satoshi-eric/7dcbd8dbd18ac8d3a19596f1667c8abc/raw/csssNamedColors.csv'
+        fetchText(csvUrl).then(text => {
+            console.log(text)
+        })
+
+
+        // const reponse = await fetch(url).then(response => {
+        //     response.text().then(text => {
+        //         console.log(text)
+        //     })
+        // })
+        // fetch(url).then(response => {
+        //     response.text().then(text => {
+        //         console.log(text)
+        //     })
+        // })
+            
+    </script>
+</body>
+</html>
